@@ -1,6 +1,10 @@
 name: Build
 
-on: [push]
+on: 
+  push
+  
+env:
+  TARGET: test1
 
 jobs:
   build:
@@ -9,4 +13,3 @@ jobs:
     
     steps:
     - uses: "./.github/actions/build"
-    - name: Build NachOS and Test
